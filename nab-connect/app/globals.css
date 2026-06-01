@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-nab-red: #C20000;
+  --color-nab-red-hover: #960000;
+  --color-nab-black: #000000;
+  --color-nab-white: #ffffff;
+  --color-nab-gray-border: #CCCCCC;
+  --color-nab-gray-bg: #E6E6E6;
+  --font-epilogue: 'Epilogue', sans-serif;
+  --font-source: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Epilogue';
+  src: url('/fonts/Epilogue-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Epilogue';
+  src: url('/fonts/Epilogue-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('/fonts/SourceSansPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: var(--font-source);
+  background-color: var(--color-nab-black);
+  color: var(--color-nab-black);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes shine {
+  100% {
+    transform: translateX(100%);
+  }
+}
