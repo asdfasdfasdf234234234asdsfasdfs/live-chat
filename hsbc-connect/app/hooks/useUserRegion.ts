@@ -47,16 +47,45 @@ export function useUserRegion() {
         }
       }
 
-      // 3. Map to regions
-      let region: RegionCode = "GLOBAL";
-      if (countryCode === "US") region = "US";
-      else if (countryCode === "GB" || countryCode === "UK") region = "UK";
-      else if (countryCode === "AU") region = "AU";
-      else if (countryCode === "HK") region = "HK";
-      else if (countryCode === "IN") region = "IN";
-      else if (countryCode === "CA") region = "CA";
+      // 3. Map to regions or dynamically generate
+      let resolvedRegionData: RegionData;
+
+      if (countryCode && ["US", "GB", "UK", "AU", "HK", "IN", "CA"].includes(countryCode)) {
+        // Exact mappings for core markets
+        let region: RegionCode = "US";
+        if (countryCode === "US") region = "US";
+        else if (countryCode === "GB" || countryCode === "UK") region = "UK";
+        else if (countryCode === "AU") region = "AU";
+        else if (countryCode === "HK") region = "HK";
+        else if (countryCode === "IN") region = "IN";
+        else if (countryCode === "CA") region = "CA";
+        
+        resolvedRegionData = REGIONS[region];
+      } else if (countryCode) {
+        // Dynamic fallback for all other countries in the world
+        try {
+          const getCountryName = new Intl.DisplayNames(['en'], { type: 'region' });
+          const countryName = getCountryName.of(countryCode) || "Global";
+          
+          resolvedRegionData = {
+            code: "GLOBAL",
+            countryName: countryName,
+            // Generic global HSBC HQ mainline number as requested
+            supportPhone: "+44 20 7991 8888", 
+            termsUrl: "https://www.hsbc.com/",
+            heroSubtitle: `Connect with our ${countryName} support team instantly.`,
+            brandName: `HSBC ${countryName}`,
+            legalEntityName: `HSBC ${countryName}`
+          };
+        } catch (e) {
+          resolvedRegionData = REGIONS.GLOBAL;
+        }
+      } else {
+        // Ultimate failure fallback
+        resolvedRegionData = REGIONS.GLOBAL;
+      }
       
-      setRegionData(REGIONS[region]);
+      setRegionData(resolvedRegionData);
       setLoading(false);
     }
 
