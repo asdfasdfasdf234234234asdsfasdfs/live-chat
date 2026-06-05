@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+/* ===== U.S. Bank Circular Font Family ===== */
+@font-face {
+  font-family: 'USB Circular';
+  src: url('/fonts/U.S.BankCircularWeb-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'USB Circular';
+  src: url('/fonts/U.S.BankCircularWeb-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'USB Circular';
+  src: url('/fonts/U.S.BankCircularWeb-Book.woff2') format('woff2');
+  font-weight: 450;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'USB Circular';
+  src: url('/fonts/U.S.BankCircularWeb-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'USB Circular';
+  src: url('/fonts/U.S.BankCircularWeb-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'USB Circular';
+  src: url('/fonts/U.S.BankCircularWeb-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== U.S. Bank Design Tokens ===== */
+@theme inline {
+  /* Primary brand colors */
+  --color-usb-navy: #00004E;
+  --color-usb-blue: #235AE4;
+  --color-usb-blue-hover: #003CC8;
+  --color-usb-blue-alt: #0A41C5;
+  --color-usb-red: #CF2A36;
+  --color-usb-red-hover: #9B0A28;
+
+  /* Neutral palette */
+  --color-usb-white: #FFFFFF;
+  --color-usb-black: #000000;
+  --color-usb-text: #00004E;
+  --color-usb-text-secondary: #4C4C50;
+  --color-usb-gray-bg: #F1F5FB;
+  --color-usb-gray-border: #CDD1E2;
+  --color-usb-input-border: #7F7F84;
+
+  /* Light blue tones */
+  --color-usb-sky: #AAD2FF;
+}
+
+body {
+  font-family: 'USB Circular', Arial, Helvetica, sans-serif;
+  background-color: var(--color-usb-white);
+  color: var(--color-usb-text);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes shine {
+  100% {
+    transform: translateX(100%);
+  }
+}

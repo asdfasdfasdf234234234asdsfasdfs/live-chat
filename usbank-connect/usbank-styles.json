@@ -1,0 +1,59 @@
+{
+  "body": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#00004E",
+    "fontFamily": "'USB Circular', Arial, Helvetica, sans-serif",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "normal"
+  },
+  "headerTop": {
+    "backgroundColor": "#F1F5FB",
+    "color": "#4C4C50",
+    "fontFamily": "'USB Circular', Arial, Helvetica, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "borderBottom": "1px solid #CDD1E2"
+  },
+  "headerMain": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#00004E",
+    "fontFamily": "'USB Circular', Arial, Helvetica, sans-serif",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "boxShadow": "0 1px 3px rgba(0,0,0,0.12)"
+  },
+  "navItems": {
+    "color": "#4C4C50",
+    "fontFamily": "'USB Circular', Arial, Helvetica, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "400"
+  },
+  "navLinkActive": {
+    "color": "#00004E",
+    "fontFamily": "'USB Circular', Arial, Helvetica, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "500",
+    "borderBottom": "2px solid #235AE4"
+  },
+  "heroTitle": {
+    "color": "#00004E",
+    "fontFamily": "'USB Circular', Arial, Helvetica, sans-serif",
+    "fontSize": "52px",
+    "fontWeight": "300"
+  },
+  "primaryButton": {
+    "backgroundColor": "#CF2A36",
+    "color": "#FFFFFF",
+    "fontFamily": "'USB Circular', Arial, Helvetica, sans-serif",
+    "fontSize": "16px",
+    "fontWeight": "500",
+    "borderRadius": "8px"
+  },
+  "footer": {
+    "backgroundColor": "#00004E",
+    "color": "#FFFFFF",
+    "fontFamily": "'USB Circular', Arial, Helvetica, sans-serif",
+    "fontSize": "14px"
+  }
+}
