@@ -1,0 +1,59 @@
+{
+  "body": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#00152F",
+    "fontFamily": "'Myriad Pro', Helvetica, Arial, sans-serif",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "lineHeight": "normal"
+  },
+  "headerTop": {
+    "backgroundColor": "#F5F7FA",
+    "color": "#5A7894",
+    "fontFamily": "'Myriad Pro', Helvetica, Arial, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "400",
+    "borderBottom": "1px solid #D1D5DB"
+  },
+  "headerMain": {
+    "backgroundColor": "#ffffff",
+    "color": "#003D6B",
+    "fontFamily": "'Myriad Pro', Helvetica, Arial, sans-serif",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "boxShadow": "0 2px 8px rgba(0,21,47,0.08)"
+  },
+  "navItems": {
+    "color": "#5A7894",
+    "fontFamily": "'Myriad Pro', Helvetica, Arial, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "400"
+  },
+  "navLinkActive": {
+    "color": "#003D6B",
+    "fontFamily": "'Myriad Pro', Helvetica, Arial, sans-serif",
+    "fontSize": "14px",
+    "fontWeight": "700",
+    "borderBottom": "3px solid #007DBA"
+  },
+  "heroTitle": {
+    "color": "#003D6B",
+    "fontFamily": "'Myriad Pro', Helvetica, Arial, sans-serif",
+    "fontSize": "52px",
+    "fontWeight": "300"
+  },
+  "primaryButton": {
+    "backgroundColor": "#007DBA",
+    "color": "#FFFFFF",
+    "fontFamily": "'Myriad Pro', Helvetica, Arial, sans-serif",
+    "fontSize": "16px",
+    "fontWeight": "600",
+    "borderRadius": "4px"
+  },
+  "footer": {
+    "backgroundColor": "#003D6B",
+    "color": "#FFFFFF",
+    "fontFamily": "'Myriad Pro', Helvetica, Arial, sans-serif",
+    "fontSize": "14px"
+  }
+}
